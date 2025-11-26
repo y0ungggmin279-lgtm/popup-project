@@ -1,28 +1,286 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>난민 자립 지원 팝업 레스토랑</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>졸업 프로젝트: 난민 자립 팝업 레스토랑</title>
+    <style>
+        /* Apple UI Style Variables */
+        :root {
+            --apple-blue: #0071e3;
+            --apple-bg: #f5f5f7;
+            --apple-text: #1d1d1f;
+            --apple-gray: #86868b;
+            --card-bg: #ffffff;
+            --radius: 20px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+            background-color: var(--apple-bg);
+            color: var(--apple-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation (Glassmorphism Effect) */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--apple-text);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--apple-blue); }
+
+        /* Container */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 80px 20px 100px; /* Top padding for fixed nav */
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 100px;
+            scroll-margin-top: 100px; /* Smooth scroll offset */
+        }
+
+        h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; }
+        h1 { font-size: 48px; margin-bottom: 20px; text-align: center; }
+        h2 { font-size: 32px; margin-bottom: 30px; border-bottom: 1px solid #d2d2d7; padding-bottom: 10px; }
+        h3 { font-size: 24px; margin-bottom: 10px; }
+        p { font-size: 17px; color: #424245; margin-bottom: 20px; }
+
+        /* Card Component */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+        /* Process Steps */
+        .process-step {
+            border-left: 3px solid var(--apple-blue);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        .process-step h3 { color: var(--apple-blue); }
+
+        /* Gallery */
+        .gallery-item {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd; /* Image placeholder color */
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--apple-gray);
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--apple-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 980px; /* Pill shape */
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #005bb5; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: var(--apple-gray);
+            font-size: 12px;
+            border-top: 1px solid #d2d2d7;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            nav ul { gap: 15px; font-size: 12px; flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
 </head>
 <body>
+
     <nav>
-        <a href="about.html">나의 소개</a> |
-        <a href="index.html">프로젝트 소개</a> |
-        <a href="process.html">제작 과정</a> |
-        <a href="result.html">프로젝트 결과</a> |
-        <a href="gallery.html">사진첩</a> |
-        <a href="review.html">배우게 된 점</a>
+        <ul>
+            <li><a href="#about">나의 소개</a></li>
+            <li><a href="#project">프로젝트 소개</a></li>
+            <li><a href="#process">제작 과정</a></li>
+            <li><a href="#result">결과</a></li>
+            <li><a href="#gallery">사진첩</a></li>
+            <li><a href="#learnings">배우게 된 점</a></li>
+        </ul>
     </nav>
 
-    <hr>
+    <div class="container">
+        
+        <div style="text-align: center; margin: 50px 0 100px;">
+            <p style="color: var(--apple-blue); font-weight: 600; margin-bottom: 10px;">Graduation Project</p>
+            <h1>작물에서 식탁까지,<br>희망을 잇는 팝업 레스토랑</h1>
+            <p style="max-width: 600px; margin: 0 auto 30px;">직접 키운 작물로 난민 신청자들의 경제적 자립과 사회적 연결을 돕는 프로젝트입니다.</p>
+            <a href="#project" class="btn">더 알아보기</a>
+        </div>
 
-    <h1>🌱 난민과 함께하는 팜 투 테이블(Farm to Table)</h1>
-    <p>직접 기른 작물로 난민 신청자들의 자립을 돕는 팝업 레스토랑 프로젝트입니다.</p>
-    
-    <img src="main-photo.jpg" alt="메인 사진" width="500">
-    
-    <h2>프로젝트 개요</h2>
-    <p>이곳에 프로젝트에 대한 자세한 설명을 적으시면 됩니다.</p>
+        <section id="about">
+            <h2> 나의 소개</h2>
+            <div class="card grid-2">
+                <div class="gallery-item" style="height: 300px;">
+                    <img src="https://via.placeholder.com/400x400?text=Profile+Image" alt="프로필 사진">
+                </div>
+                <div>
+                    <h3>안녕하세요, [이름]입니다.</h3>
+                    <p>
+                        농업과 사회적 가치를 연결하는 것에 깊은 관심을 가지고 있습니다. 
+                        단순히 작물을 기르는 것을 넘어, 그 작물이 누군가에게 기회가 되고 
+                        사회를 치유하는 도구가 될 수 있다고 믿습니다.
+                    </p>
+                    <ul style="list-style: none; color: #424245;">
+                        <li><strong>Major.</strong> [전공 입력]</li>
+                        <li><strong>Email.</strong> example@email.com</li>
+                        <li><strong>Role.</strong> 기획, 재배, 요리 개발, 운영 총괄</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="project">
+            <h2>프로젝트 소개</h2>
+            <div class="card">
+                <h3>난민과 함께하는 팜 투 테이블 (Farm to Table)</h3>
+                <p>
+                    이 프로젝트는 '음식'이라는 보편적인 언어를 통해 난민 신청자들이 겪는 소외 문제를 해결하고자 시작되었습니다.
+                    제가 직접 땀 흘려 키운 신선한 작물을 재료로 사용하며, 난민 분들이 직접 요리와 서빙에 참여하여
+                    수익을 창출하고 지역 사회와 소통하는 장을 마련했습니다.
+                </p>
+                <div class="grid-3" style="margin-top: 30px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 10px;">🌱</div>
+                        <strong>직접 재배</strong>
+                        <p style="font-size: 14px;">무농약 친환경 작물 재배</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 10px;">🤝</div>
+                        <strong>사회적 연결</strong>
+                        <p style="font-size: 14px;">난민과 지역 주민의 만남</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 10px;">💰</div>
+                        <strong>자립 지원</strong>
+                        <p style="font-size: 14px;">수익금 전액 후원</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <h2>제작 과정</h2>
+            <div class="card">
+                <div class="process-step">
+                    <h3>Step 1. 작물 선정 및 재배</h3>
+                    <p>봄부터 [작물 이름] 파종을 시작했습니다. 100일간의 기록을 통해 가장 신선한 재료를 확보했습니다.</p>
+                </div>
+                <div class="process-step">
+                    <h3>Step 2. 파트너십 구축</h3>
+                    <p>난민 지원 NGO와 협력하여 요리에 관심이 있는 참가자 3명을 모집하고 인터뷰를 진행했습니다.</p>
+                </div>
+                <div class="process-step">
+                    <h3>Step 3. 메뉴 개발 및 팝업 준비</h3>
+                    <p>재배한 작물의 특성을 살린 퓨전 메뉴 4가지를 개발하고, 팝업 레스토랑 공간을 대여했습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="result">
+            <h2>프로젝트 결과</h2>
+            <div class="grid-2">
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--apple-blue); font-size: 48px; margin-bottom: 0;">150+</h3>
+                    <p>총 방문객 수</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--apple-blue); font-size: 48px; margin-bottom: 0;">100%</h3>
+                    <p>재료 소진율</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>방명록 & 피드백</h3>
+                <blockquote style="border-left: 4px solid #d2d2d7; padding-left: 15px; color: #6e6e73; font-style: italic;">
+                    "음식이 맛있는 것은 물론이고, 식사를 통해 난민 문제에 대해 자연스럽게 생각해보는 계기가 되었습니다. 따뜻한 공간이었습니다."
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="grid-3">
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Farm" alt="농장"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cooking" alt="요리"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Restaurant" alt="식당"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=People" alt="사람들"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Dish" alt="음식"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Menu" alt="메뉴판"></div>
+            </div>
+        </section>
+
+        <section id="learnings">
+            <h2>배우게 된 점</h2>
+            <div class="card" style="background-color: var(--apple-blue); color: white;">
+                <h3 style="color: white;">성장과 깨달음</h3>
+                <p style="color: rgba(255,255,255,0.9);">
+                    단순히 좋은 의도만으로는 프로젝트를 성공시킬 수 없다는 것을 배웠습니다. 
+                    재료 수급의 불안정함, 인력 관리의 어려움 등을 겪으며 실무적인 해결 능력을 기를 수 있었습니다.
+                    무엇보다 '함께함'의 가치가 얼마나 큰 시너지를 내는지, 작은 텃밭에서 시작된 이 프로젝트가 증명해주었습니다.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 [본인 이름]. All rights reserved.</p>
+        <p>Designed with Apple Human Interface Guidelines Style</p>
+    </footer>
 
 </body>
 </html>
