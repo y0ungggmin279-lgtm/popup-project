@@ -2,22 +2,39 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>졸업 프로젝트 메인 | 팝업 레스토랑</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>홈페이지 메인 | 팝업 레스토랑</title>  </head>
 <body>
-    <h1>희망을 잇는 팝업 레스토랑 프로젝트</h1>
-    <p>환영합니다. 아래 메뉴를 클릭하여 각 페이지로 이동해 주세요.</p>
-    
-    <ul>
-        <li><a href="about.html">1. 자기 소개 페이지</a></li>
-        <li><a href="project.html">2. 프로젝트 소개 페이지</a></li>
-        <li><a href="gallery.html">3. 갤러리 (사진/영상)</a></li>
-        <li><a href="data.html">4. 자료실 (보고서/PDF)</a></li>
-        <li><a href="contact.html">5. 방문자 참여 페이지</a></li>
-    </ul>
+    <header>
+        <a href="index.html" class="logo">🍎 Capstone Project</a>
+        <nav>
+            <ul>
+                <li><a href="about.html">나의 소개</a></li>
+                <li><a href="project.html">프로젝트 소개</a></li>
+                <li><a href="gallery.html">갤러리</a></li>
+                <li><a href="data.html">자료실</a></li>
+                <li><a href="contact.html">참여</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <hr>
-    <h2>프로젝트 요약</h2>
-    <p>난민 신청자들의 자립을 돕기 위한 팜 투 테이블(Farm to Table) 레스토랑 프로젝트.</p>
+    <div class="container" style="text-align: center; padding-top: 50px; padding-bottom: 50px;">
+        <h1 style="font-size: 60px;">작물에서 희망으로</h1>
+        <p style="font-size: 20px; color: var(--apple-gray); max-width: 600px; margin: 15px auto 40px;">
+            난민 신청자들의 자립을 돕는 팜 투 테이블(Farm to Table) 팝업 레스토랑 프로젝트
+        </p>
+        
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <img src="main-hero.jpg" alt="메인 프로젝트 사진" style="width: 100%; height: auto; display: block;">
+        </div>
+
+        <h2>프로젝트 핵심 가치</h2>
+        <a href="project.html" class="btn" style="margin-top: 20px;">프로젝트 자세히 보기</a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 [본인 이름]. All rights reserved.</p>
+    </footer>
 </body>
 </html>
