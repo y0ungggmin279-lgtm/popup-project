@@ -3,46 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <title>나의 소개</title>
+    <title>나의 소개 | 2025 겨울 팝업</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pretendard:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-    <a href="index.html" class="logo">Project Pop-up</a>
-    <nav>
-        <ul>
-            <li><a href="about.html">나의 소개</a></li>
-            <li><a href="project.html">프로젝트 소개</a></li>
-            <li><a href="result.html">결과</a></li> 
-            <li><a href="gallery.html">사진첩</a></li>
-            <li><a href="data.html">자료실</a></li>
-            <li><a href="contact.html">참여</a></li>
-        </ul>
-    </nav>
-</header>
-    <div class="container">
-        <h1>나의 소개</h1>
-        
-        <div class="card grid-2">
-            <div>
-                <img src="my-profile.jpg" alt="프로필 사진" style="width: 100%; border-radius: 12px;">
-            </div>
-            <div>
-                <h2>안녕하세요, 영민입니다.</h2>
-                <p>
-                    저는 6~9학년 4년 동안 꾸준히 농사 프로젝트에 참여할 만큼 농사에 큰 관심을 가져왔고, 포스트중등에 올라온 뒤로는 매주 3~4일을 홍성에서 지내며 자연농법으로 벼농사를 배우고, 젊은협업농장에서 일하며 잎채소 농사와 마을살이를 함께 경험해왔습니다. 홍성에서는 레이지와 함께 자연농법으로 벼농사를 지으며 추수까지 전 과정을 직접 해왔습니다. 졸업 과정에서 이 경험을 ‘굿 워크’와 어떻게 연결할지 고민했습니다. 작년에는 수확물을 사람들과 나누지 못했던 것을 떠올렸습니다. 한해 동안 열심히 키운 쌀이 제 밥상에만 오르는 것으로 끝난다면 아쉬울 것 같았습니다. 그래서 올해는 레이지와 함께 한 해 동안 정성 들여 수확한 쌀과 잎채소들을 여러 사람들과 나누는 일을 굿워크 프로젝트로 삼으려 합니다.
-
-                <ul style="list-style: disc; margin-left: 20px; color: #424245;">
-                    <li>업: 농사</li>
-                    <li>역할: 전체 기획</li>
-                    <li>연락: y0ungggmin279@gmail.com</li>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">SEONGMISAN <span style="color:#fff;">2025</span></a>
+            <nav>
+                <ul>
+                    <li><a href="about.html">나의 소개</a></li>
+                    <li><a href="project.html">프로젝트 소개</a></li>
+                    <li><a href="result.html">결과</a></li>
+                    <li><a href="gallery.html">사진첩</a></li>
+                    <li><a href="data.html">자료실</a></li>
+                    <li><a href="contact.html">참여</a></li>
                 </ul>
-                <a href="project.html" class="btn-secondary" style="margin-top: 15px;">프로젝트 동기 보기</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="margin-bottom: 10px;">Farmer & Host</h1>
+        <p style="color: var(--accent-gold); font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 50px;">
+            "흙을 만지는 농부에서, 식탁을 차리는 호스트로"
+        </p>
+
+        <div class="grid-2" style="align-items: start;">
+            <div>
+                <img src="묶음1.jpg" alt="영민 프로필" style="width: 100%; border-radius: 2px; filter: sepia(20%) contrast(90%); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                
+                <div class="card" style="margin-top: 30px; padding: 30px; border: 1px solid var(--accent-gold);">
+                    <ul style="list-style: none; color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                        <li style="margin-bottom: 10px;">
+                            <strong style="color: var(--accent-gold); display: inline-block; width: 60px;">Name.</strong> 박영민
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <strong style="color: var(--accent-gold); display: inline-block; width: 60px;">Role.</strong> 전체 기획, 벼농사
+                        </li>
+                        <li>
+                            <strong style="color: var(--accent-gold); display: inline-block; width: 60px;">Email.</strong> y0ungggmin279@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="padding-top: 10px;">
+                <h2 style="font-size: 2rem; margin-bottom: 30px; text-align: left; border: none;">
+                    안녕하세요,<br>
+                    <span style="color: #fff;">농사짓는 영민입니다.</span>
+                </h2>
+
+                <div style="font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.8;">
+                    <p style="margin-bottom: 25px;">
+                        저는 6학년 때부터 9학년까지, 4년이라는 시간 동안 꾸준히 농사 프로젝트에 참여할 만큼 흙과 작물에 깊은 애정을 가져왔습니다. 포스트중등 과정에 진학한 뒤로는 매주 3~4일을 홍성에서 지내며 본격적인 농부의 삶을 배웠습니다.
+                    </p>
+                    
+                    <p style="margin-bottom: 25px;">
+                        젊은협업농장에서 잎채소 농사와 마을살이를 경험했고, 특히 <strong>'레이지'와 함께 자연농법으로 벼농사를 지으며 파종부터 추수까지의 전 과정</strong>을 제 손으로 직접 해냈습니다. 자연의 속도에 맞춰 땀 흘리는 정직한 시간이었습니다.
+                    </p>
+
+                    <p style="margin-bottom: 40px;">
+                        졸업을 앞두고 이 소중한 경험을 저의 '굿 워크(Good Work)'와 어떻게 연결할지 고민했습니다. 작년에는 수확의 기쁨을 저 혼자만 누려 아쉬움이 남았습니다. 그래서 올해는 <strong>제가 정성 들여 수확한 쌀과 채소를 더 많은 사람들과 나누는 식탁</strong>을 마련하기로 했습니다.
+                    </p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <a href="project.html" class="btn" style="margin-right: 15px;">프로젝트 더 알아보기</a>
+                    <a href="contact.html" class="btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;">예약하러 가기</a>
+                </div>
             </div>
         </div>
     </div>
+
     <footer>
-        <p>Copyright © 2024 영민. All rights reserved.</p>
+        <p>Copyright © 2024 Youngmin. All rights reserved.</p>
     </footer>
 </body>
 </html>
