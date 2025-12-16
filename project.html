@@ -9,8 +9,8 @@
     <style>
         /* 깔끔해진 일정표 스타일 */
         .schedule-container {
-            max-width: 550px;
-            margin: 30px auto 0;
+            max-width: 600px;
+            margin: 0 auto;
             text-align: left;
         }
         .schedule-item {
@@ -38,19 +38,17 @@
         /* D-Day 강조 박스 스타일 */
         .d-day-box {
             margin-top: 20px;
-            background: rgba(197, 160, 89, 0.1); /* 은은한 골드 배경 */
-            border: 1px solid rgba(197, 160, 89, 0.5); /* 테두리 */
-            border-radius: 6px;
+            background: rgba(197, 160, 89, 0.1); 
+            border: 1px solid rgba(197, 160, 89, 0.5);
+            border-radius: 4px;
             padding: 20px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .d-day-box .sc-date {
             color: #fff;
             font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         .d-day-box .sc-desc {
             color: #fff;
@@ -125,9 +123,13 @@
             </div>
         </div>
 
-        <div class="card" style="text-align: center; border: 1px solid rgba(197, 160, 89, 0.5); background: rgba(15, 23, 20, 0.8); margin-bottom: 60px;">
-            <h3 style="color: #fff; border-bottom: none; margin-bottom: 5px;">Project Schedule</h3>
-            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);">12월 주요 진행 일정</p>
+        <div class="card" style="border: 1px solid var(--accent-gold);">
+            <h2 style="font-size: 1.8rem; margin-bottom: 10px; border-bottom: none; color: #fff; text-align: center;">
+                Project Schedule
+            </h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                12월 팝업 레스토랑 진행 일정
+            </p>
             
             <div class="schedule-container">
                 <div class="schedule-item">
@@ -147,6 +149,12 @@
                     <span class="sc-date">12 / 13 <span class="badge">D-Day</span></span>
                     <span class="sc-desc">팝업 레스토랑 오픈</span>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="result.html" class="btn" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+                    프로젝트 결과 보러가기
+                </a>
             </div>
         </div>
 
@@ -168,4 +176,18 @@
                 </li>
                 <li>
                     <strong style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--accent-red);">04. 팝업 레스토랑 운영 (December 13)</strong>
-                    <p style="margin-top: 5px; margin-bottom: 0; color
+                    <p style="margin-top: 5px; margin-bottom: 0; color: #555;">1일 팝업 레스토랑 오픈. 수익금 전액 비국민 지원 기금 조성.</p>
+                </li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="gallery.html" class="btn" style="border-color: var(--accent-red); color: var(--accent-red);">현장 사진 보러가기</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 Youngmin. All rights reserved.</p>
+    </footer>
+</body>
+</html>
