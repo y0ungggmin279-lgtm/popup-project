@@ -6,6 +6,42 @@
     <title>프로젝트 소개 | 2025 겨울 팝업</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pretendard:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 일정표 스타일 추가 */
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .schedule-row:last-child {
+            border-bottom: none;
+        }
+        .schedule-date {
+            color: var(--accent-gold);
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            width: 30%;
+        }
+        .schedule-desc {
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            text-align: right;
+            width: 70%;
+        }
+        .d-day {
+            background: rgba(197, 160, 89, 0.1);
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 5px;
+            border-bottom: none;
+        }
+        .d-day .schedule-date, .d-day .schedule-desc {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -62,20 +98,29 @@
             </div>
         </div>
 
-        <div class="card" style="text-align: center; border: 1px solid rgba(197, 160, 89, 0.5); background: rgba(15, 23, 20, 0.8); margin-bottom: 60px;">
-            <h3 style="color: #fff; border-bottom: none; margin-bottom: 20px;">Event Info</h3>
-            <h2 style="font-size: 2rem; color: var(--accent-gold); border: none; margin-bottom: 10px;">
-                2025. 12. 13. (SAT)
-            </h2>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 30px;">
-                성미산학교 다목적실
+        <div class="card" style="border: 1px solid rgba(197, 160, 89, 0.5); background: rgba(15, 23, 20, 0.8); margin-bottom: 60px;">
+            <h3 style="color: #fff; border-bottom: none; margin-bottom: 10px; text-align: center;">Project Schedule</h3>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                12월 팝업 레스토랑 진행 일정
             </p>
             
-            <div style="display: inline-block; text-align: left; background: rgba(255,255,255,0.05); padding: 20px 40px; border-radius: 4px;">
-                <ul style="list-style: none; color: #ccc; font-size: 0.95rem;">
-                    <li style="margin-bottom: 8px;"><span style="color: var(--accent-gold); margin-right: 15px;">Lunch</span> 11:30 - 14:20 (1, 2부)</li>
-                    <li><span style="color: var(--accent-gold); margin-right: 15px;">Dinner</span> 17:30 - 20:20 (3, 4부)</li>
-                </ul>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="schedule-row">
+                    <span class="schedule-date">12 / 01</span>
+                    <span class="schedule-desc">요리 워크숍</span>
+                </div>
+                <div class="schedule-row">
+                    <span class="schedule-date">12 / 07</span>
+                    <span class="schedule-desc">홍보 및 사전 예약</span>
+                </div>
+                <div class="schedule-row">
+                    <span class="schedule-date">12 / 12</span>
+                    <span class="schedule-desc">팝업 준비 및 세팅</span>
+                </div>
+                <div class="schedule-row d-day">
+                    <span class="schedule-date">12 / 13</span>
+                    <span class="schedule-desc">팝업 당일 (D-Day)</span>
+                </div>
             </div>
         </div>
 
