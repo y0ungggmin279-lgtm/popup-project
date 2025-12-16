@@ -7,18 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pretendard:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 일정표 스타일 */
+        /* 깔끔해진 일정표 스타일 */
         .schedule-container {
             max-width: 600px;
             margin: 0 auto;
-            text-align: left; /* 내용물은 왼쪽 정렬 */
+            text-align: left;
         }
         .schedule-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 18px 10px;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2); /* 얇은 골드 라인 */
         }
         .schedule-item:last-of-type {
             border-bottom: none;
@@ -35,7 +35,7 @@
             font-weight: 300;
             font-size: 1rem;
         }
-        /* D-Day 박스 */
+        /* D-Day 강조 박스 스타일 */
         .d-day-box {
             margin-top: 20px;
             background: rgba(197, 160, 89, 0.1); 
@@ -46,8 +46,14 @@
             justify-content: space-between;
             align-items: center;
         }
-        .d-day-box .sc-date { color: #fff; font-weight: 600; }
-        .d-day-box .sc-desc { color: #fff; font-weight: 500; }
+        .d-day-box .sc-date {
+            color: #fff;
+            font-weight: 600;
+        }
+        .d-day-box .sc-desc {
+            color: #fff;
+            font-weight: 500;
+        }
         .badge {
             display: inline-block;
             background: var(--accent-red);
@@ -121,7 +127,7 @@
             <h2 style="font-size: 1.8rem; margin-bottom: 10px; border-bottom: none; color: #fff; text-align: center;">
                 Project Schedule
             </h2>
-            <p style="text-align: left; margin-bottom: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.6); padding-left: 10px;">
+            <p style="text-align: center; margin-bottom: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
                 12월 팝업 레스토랑 진행 일정
             </p>
             
@@ -173,6 +179,10 @@
                     <p style="margin-top: 5px; margin-bottom: 0; color: #555;">1일 팝업 레스토랑 오픈. 수익금 전액 비국민 지원 기금 조성.</p>
                 </li>
             </ul>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="gallery.html" class="btn" style="border-color: var(--accent-red); color: var(--accent-red);">현장 사진 보러가기</a>
+            </div>
         </div>
     </div>
 
